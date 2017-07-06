@@ -1,0 +1,66 @@
+@font-face {
+  font-family: 'Avenir';
+  src: url('../fonts/AvenirNextCyr/AvenirNextCyr-UltraLight.otf');
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Avenir';
+  src: url('../fonts/AvenirNextCyr/AvenirNextCyr-Thin.otf');
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Avenir';
+  src: url('../fonts/AvenirNextCyr/AvenirNextCyr-Light.otf');
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Avenir';
+  src: url('../fonts/AvenirNextCyr/AvenirNextCyr-Regular.otf');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Avenir';
+  src: url('../fonts/AvenirNextCyr/AvenirNextCyr-Medium.otf');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Avenir';
+  src: url('../fonts/AvenirNextCyr/AvenirNextCyr-Demi.otf');
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Avenir';
+  src: url('../fonts/AvenirNextCyr/AvenirNextCyr-Bold.otf');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Avenir';
+  src: url('../fonts/AvenirNextCyr/AvenirNextCyr-Heavy.otf');
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Nexa';
+  src: url('../fonts/NexaLight.otf');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'NexaHeavy';
+  src: url('../fonts/NexaRustSans-Black.otf');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'rouble';
+  src: url('../fonts/rouble.otf');
+  font-weight: 400;
+  font-style: normal;
+}
