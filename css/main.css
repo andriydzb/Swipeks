@@ -273,6 +273,15 @@ nav ul li a:focus {
   height: auto;
   margin-bottom: 40px;
   box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.25);
+  -webkit-transition: 0.5s ease;
+          transition: 0.5s ease;
+}
+.main-content .grid-item:hover {
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: 0.5s ease;
+          transition: 0.5s ease;
 }
 .main-content .grid-item_image {
   position: relative;
@@ -390,6 +399,7 @@ footer {
 footer .footer {
   font-family: 'Avenir';
   padding-top: 70px;
+  height: 760px;
 }
 footer .footer h3 {
   color: #ffe89c;
@@ -464,7 +474,6 @@ footer .footer__left_popular-tags {
   margin-top: 19px;
   padding-bottom: 22px;
   letter-spacing: 0.5px;
-  border-bottom: 1px solid #f0f0f0;
 }
 footer .footer__left_popular-tags ul {
   list-style: none;
@@ -489,7 +498,8 @@ footer .footer__right {
 footer .footer__right h3 {
   margin-top: 0;
 }
-footer .footer__right_best-rates_item {
+footer .footer__right_best-rates_item,
+footer .footer__right_best-reviews_item {
   position: relative;
   height: 211px;
   width: 211px;
@@ -498,10 +508,16 @@ footer .footer__right_best-rates_item {
   margin-right: 14px;
   display: inline-block;
 }
-footer .footer__right_best-rates_item:last-child {
+footer .footer__right_best-rates_item:hover,
+footer .footer__right_best-reviews_item:hover {
+  box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.6);
+}
+footer .footer__right_best-rates_item:last-child,
+footer .footer__right_best-reviews_item:last-child {
   margin-right: 0;
 }
-footer .footer__right_best-rates_item_opacity {
+footer .footer__right_best-rates_item_opacity,
+footer .footer__right_best-reviews_item_opacity {
   z-index: 2;
   height: 211px;
   width: 211px;
@@ -510,26 +526,130 @@ footer .footer__right_best-rates_item_opacity {
   background-color: #564f48;
   opacity: 0.549;
 }
-footer .footer__right_best-rates_item_text {
+footer .footer__right_best-rates_item_opacity:hover,
+footer .footer__right_best-reviews_item_opacity:hover {
+  opacity: 0;
+}
+footer .footer__right_best-rates_item_text,
+footer .footer__right_best-reviews_item_text {
   position: absolute;
   left: 15px;
   bottom: 16px;
   z-index: 3;
 }
-footer .footer__right_best-rates_item_text h4 {
+footer .footer__right_best-rates_item_text h4,
+footer .footer__right_best-reviews_item_text h4 {
   color: #fff;
   font-size: 14px;
   margin-bottom: 3px;
 }
-footer .footer__right_best-rates_item_text_author {
+footer .footer__right_best-rates_item_text_author,
+footer .footer__right_best-reviews_item_text_author {
   font-weight: 300;
   font-size: 12px;
   margin: 0;
   color: #fff;
 }
+footer .footer__right_best-reviews {
+  margin-top: 43px;
+}
+footer .footer__contacts {
+  background-color: #363636;
+  height: 60px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+footer .footer__contacts .footer-icons {
+  background-image: url(../img/footer-icons.png);
+  background-repeat: no-repeat;
+  display: block;
+}
+footer .footer__contacts .footer-icons-facebook {
+  width: 7px;
+  height: 14px;
+  background-position: -5px -5px;
+}
+footer .footer__contacts .footer-icons-google {
+  width: 15px;
+  height: 14px;
+  background-position: -22px -5px;
+}
+footer .footer__contacts .footer-icons-mail {
+  width: 24px;
+  height: 16px;
+  background-position: -5px -29px;
+}
+footer .footer__contacts .footer-icons-pinterest {
+  width: 11px;
+  height: 14px;
+  background-position: -39px -29px;
+}
+footer .footer__contacts .footer-icons-twitter {
+  width: 16px;
+  height: 14px;
+  background-position: -47px -5px;
+}
+footer .footer__contacts_items {
+  font-family: 'Avenir';
+}
+footer .footer__contacts_items * {
+  display: inline-block;
+}
+footer .footer__contacts_items a i {
+  position: relative;
+  top: 2px;
+}
+footer .footer__contacts_items span {
+  color: #fff;
+  font-size: 12px;
+  margin: 0 12px;
+  font-weight: 100;
+}
+footer .footer__contacts_items ul {
+  padding-left: 15px;
+}
+footer .footer__contacts_items ul li {
+  margin-right: 18px;
+}
 @media (max-width: 1270px) {
   .page__wrapper {
     width: 991px;
+  }
+  footer .footer__left {
+    display: none;
+  }
+  footer .footer__right {
+    width: 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 @media (max-width: 991px) {
@@ -756,5 +876,66 @@ footer .footer__right_best-rates_item_text_author {
   }
   .main-content {
     padding-top: 30px;
+  }
+  footer {
+    height: 820px;
+  }
+  footer .footer {
+    padding-top: 20px;
+  }
+  footer .footer__right {
+    width: 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  footer .footer__right_best-reviews {
+    display: none;
+  }
+  footer .footer__right_best-rates {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  footer .footer__contacts_items {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  footer .footer__contacts_items span {
+    display: none;
   }
 }
